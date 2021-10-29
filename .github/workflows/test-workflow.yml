@@ -1,12 +1,12 @@
 # Docs for the Azure Web Apps Deploy action: https://go.microsoft.com/fwlink/?linkid=2134798
 # More GitHub Actions for Azure: https://go.microsoft.com/fwlink/?linkid=2135048
 
-name: Azure App Service - (Production), Build and deploy Spring app
+name: Azure App Service - (tst), Build and deploy Spring app
 
 on:
   push:
     branches:
-      - main
+      - tst
 
 jobs:
   build-and-deploy:
@@ -30,6 +30,7 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: webapidemo01
-        slot-name: production
-        publish-profile: ${{ secrets.PROD_WEBAPIDEMO01 }}
+        slot-name: tst
+        publish-profile: ${{ secrets.WEBAPIDEMO01 }}
         package: ${{ github.workspace }}/target/*.war
+
