@@ -33,3 +33,4 @@ jobs:
         slot-name: production
         publish-profile: ${{ secrets.PROD_WEBAPIDEMO01 }}
         package: ${{ github.workspace }}/target/*.war
+        
