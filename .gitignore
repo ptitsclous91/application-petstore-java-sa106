@@ -30,5 +30,3 @@ teamworkUser.xml
 projectFilesBackup*
 *.zip
 *.gzprojectFilesBackup*
-*workflow.yml
-.github/workflows/*workflow.yml
