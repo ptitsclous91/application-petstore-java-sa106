@@ -6,7 +6,7 @@ name: Azure App Service - (tst), Build and deploy Spring app
 on:
   push:
     branches:
-      - tst
+      - dev
 
 jobs:
   build-and-deploy:
@@ -30,7 +30,7 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: webapidemo01
-        slot-name: tst
+        slot-name: dev
         publish-profile: ${{ secrets.WEBAPIDEMO01 }}
         package: ${{ github.workspace }}/target/*.war
 
