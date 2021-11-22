@@ -31,6 +31,6 @@ jobs:
       with:
         app-name: webapidemo01
         slot-name: dev
-        publish-profile: ${{ secrets.WEBAPIDEMO01 }}
+        publish-profile: ${{ secrets.DEV_WEBAPIDEMO01 }}
         package: ${{ github.workspace }}/target/*.war
 
